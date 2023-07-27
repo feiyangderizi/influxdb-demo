@@ -1,0 +1,39 @@
+# system configuration
+application:
+  name: influx-demo
+  port: 8888
+  db-type: 'mysql'
+  use-redis: false     # 使用redis
+  use-mongodb: false     # 使用mongodb
+  use-rabbitmq: false     # 使用rabbitmq
+  auto-check-time: 30  #自动检查时间
+
+# redis configuration
+redis:
+  addr: '127.0.0.1:6379'
+  password: ''
+  db: 0
+  min-idle-conns: 10
+  pool-size: 100
+  idle-time-out: 30
+
+# mysql connect configuration
+mysql:
+  conn: '******:******@tcp(******:3306)/******?charset=utf8&parseTime=True&loc=Local'
+  max-idle-conns: 10
+  max-open-conns: 100
+  slow-threshold: 200
+  log-mode: "info" #silent,error,warn,info
+
+rabbitmq:
+  addr:
+  exchange:
+
+mongodb:
+  addr: ''
+  db: ""
+  max-idle-conns: 10
+  min-open-conns: 1
+  max-open-conns: 100
+  idle-time-out: 30
+  log-collection: "GinServerLog"
